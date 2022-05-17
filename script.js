@@ -8,7 +8,9 @@ function App() {
     setGift(users[index]);
   }
   function handleAdd() {
-    setUsers([...users, user]);
+    if (user) {
+      setUsers([...users, user]);
+    }
     setUser("");
   }
   return (
